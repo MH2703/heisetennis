@@ -8,7 +8,7 @@
   <meta name="robots" content="index,follow" />
 
   <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="assets/style.css?v=6" />
+  <link rel="stylesheet" href="assets/style.css?v=7" />
 </head>
 
 <body>
@@ -16,7 +16,11 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
 
-      <!-- Desktop Navigation (links + rechts) -->
+      <!-- kleines Logo im Header (erscheint erst beim Scrollen) -->
+      <a class="header-brand" href="#top" aria-label="Start">
+        <img src="assets/logo.png" alt="HEISE TENNIS" />
+      </a>
+
       <nav class="nav nav-left" aria-label="Navigation links">
         <a href="#tennis">Tennis</a>
         <a href="#padel">Padel</a>
@@ -28,7 +32,6 @@
         <a href="#kontakt" class="nav-cta">Kontakt</a>
       </nav>
 
-      <!-- Mobile Burger -->
       <button class="nav-toggle" type="button" aria-controls="mobileNav" aria-expanded="false">
         <span class="sr-only">Menü öffnen</span>
         <span class="icon icon--hamburger" aria-hidden="true">
@@ -43,7 +46,6 @@
         </span>
       </button>
 
-      <!-- Mobile Dropdown Navigation (NUR mobile sichtbar) -->
       <nav class="nav-mobile" id="mobileNav" aria-label="Mobile Navigation">
         <a href="#tennis">Tennis</a>
         <a href="#padel">Padel</a>
@@ -58,7 +60,8 @@
   <main id="top">
 
     <section class="hero hero-with-logo">
-      <!-- Logo im Mainbereich, ragt in Header -->
+
+      <!-- großes Logo im Mainbereich -->
       <div class="hero-logo">
         <img src="assets/logo.png" alt="HEISE TENNIS Logo" />
       </div>
@@ -243,6 +246,6 @@
 
   </main>
 
-  <script src="assets/script.js?v=1"></script>
+  <script src="assets/script.js?v=2"></script>
 </body>
 </html>
