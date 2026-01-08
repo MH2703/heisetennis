@@ -8,7 +8,8 @@
   <meta name="robots" content="index,follow" />
 
   <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="assets/style.css?v=1" />
+  <!-- WICHTIG: v=2 erzwingt neues CSS -->
+  <link rel="stylesheet" href="assets/style.css?v=2" />
 </head>
 
 <body>
@@ -47,14 +48,14 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
+    <!-- HERO -->
     <section id="top" class="hero">
       <div class="container hero-grid">
         <div class="card hero-card">
           <h1>Tennisschule &amp; Padelschule</h1>
           <p class="muted">
-            Professionelles Training für Kinder, Jugendliche &amp; Erwachsene – mit klaren Trainingsplänen,
-            Spaß am Sport und messbarem Fortschritt.
+            Professionelles Training für Kinder, Jugendliche &amp; Erwachsene –
+            strukturiert, modern und mit Freude am Sport.
           </p>
 
           <div class="hero-actions">
@@ -72,15 +73,15 @@
         <div class="card hero-card hero-highlight">
           <h2>Neu: Padel Training</h2>
           <p class="muted">
-            Du willst Padel starten oder besser werden? Wir bieten Einsteiger- und Fortgeschrittenentraining
-            sowie Gruppen- und Einzelstunden.
+            Einsteiger- und Fortgeschrittenentraining, Gruppen &amp; Einzel –
+            schnell ins Spiel kommen und besser werden.
           </p>
           <a class="btn secondary" href="#padel">Padel ansehen</a>
         </div>
       </div>
     </section>
 
-    <!-- Tennis -->
+    <!-- TENNIS -->
     <section id="tennis" class="page">
       <div class="container">
         <div class="chapter">
@@ -91,21 +92,99 @@
         <div class="grid3">
           <div class="card">
             <h3>Kinder &amp; Jugend</h3>
-            <p class="muted">Spielerisch lernen, Technik aufbauen, sichere Grundlagen – altersgerecht strukturiert.</p>
+            <p class="muted">Altersgerechtes Training mit Technik, Koordination &amp; Spiel.</p>
           </div>
           <div class="card">
             <h3>Erwachsene</h3>
-            <p class="muted">Einsteiger bis Mannschaftsspieler: Technik, Taktik, Matchpraxis und Fitness.</p>
+            <p class="muted">Einsteiger bis Mannschaftsspieler – Technik, Taktik &amp; Matchpraxis.</p>
           </div>
           <div class="card">
             <h3>Einzel / Gruppe</h3>
-            <p class="muted">Flexibel planbar. Auf Wunsch mit Trainingsplan und Zielsetzung.</p>
+            <p class="muted">Flexibel planbar – individuell oder in kleinen Gruppen.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Kontakt -->
+    <!-- PADEL -->
+    <section id="padel" class="page alt">
+      <div class="container">
+        <div class="chapter">
+          <div class="num">02</div>
+          <h2>Padel</h2>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Einsteiger</h3>
+            <p class="muted">Regeln, Grundschläge &amp; Spielverständnis.</p>
+          </div>
+          <div class="card">
+            <h3>Fortgeschritten</h3>
+            <p class="muted">Bandenspiel, Taktik &amp; Matchstrategien.</p>
+          </div>
+          <div class="card">
+            <h3>Spielpraxis</h3>
+            <p class="muted">Matches, Coaching &amp; Feedback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPS -->
+    <section id="camps" class="page">
+      <div class="container">
+        <div class="chapter">
+          <div class="num">03</div>
+          <h2>Camps</h2>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Oster- &amp; Herbstferien</h3>
+            <p class="muted">
+              Intensives Training, Spiel &amp; Spaß – je nach Termin Tennis,
+              Padel oder kombiniert.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Jetzt anfragen</h3>
+            <p class="muted">Termine &amp; Details gerne auf Anfrage.</p>
+            <a class="btn primary mt16" href="#kontakt">Camp anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER UNS -->
+    <section id="ueberuns" class="page alt">
+      <div class="container">
+        <div class="chapter">
+          <div class="num">04</div>
+          <h2>Über uns</h2>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>HEISE TENNIS</h3>
+            <p class="muted">
+              Moderne Tennis- &amp; Padelschule mit klarer Trainingsstruktur,
+              individueller Betreuung und Freude am Spiel.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Unsere Werte</h3>
+            <ul class="muted">
+              <li>Qualität &amp; Struktur</li>
+              <li>Individuelle Förderung</li>
+              <li>Motivation &amp; Spaß</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
     <section id="kontakt" class="page">
       <div class="container">
         <div class="chapter">
@@ -117,8 +196,8 @@
           <div class="card">
             <h3>Anfrage senden</h3>
 
-            <!-- Kontaktformular mit Honeypot -->
             <form id="contactForm" novalidate>
+              <!-- Honeypot -->
               <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
               <label>
@@ -133,7 +212,7 @@
 
               <label>
                 Nachricht
-                <textarea id="message" required placeholder="Worum geht’s? (Tennis, Padel, Camp, …)"></textarea>
+                <textarea id="message" required placeholder="Worum geht’s? (Tennis, Padel, Camp …)"></textarea>
               </label>
 
               <button type="submit" class="btn primary mt16">Anfrage vorbereiten</button>
