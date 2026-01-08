@@ -11,6 +11,8 @@
   --radius:18px;
   --shadow:0 10px 30px rgba(0,0,0,.08);
   --container:1100px;
+
+  --header-h: 72px; /* feste Header-Höhe -> Logo kann nicht "drunter" rutschen */
 }
 
 *{ box-sizing:border-box; }
@@ -26,7 +28,6 @@ body{
 }
 
 a{ color:inherit; text-decoration:none; }
-a:hover{ text-decoration:none; }
 
 .container{
   width:min(var(--container), calc(100% - 32px));
@@ -39,6 +40,7 @@ a:hover{ text-decoration:none; }
   position:sticky;
   top:0;
   z-index:1000;
+  height: var(--header-h);
   background:rgba(244,245,246,.97);
   border-bottom:1px solid var(--line);
   backdrop-filter: blur(10px);
@@ -46,40 +48,11 @@ a:hover{ text-decoration:none; }
 
 .header-inner{
   position:relative;
+  height: var(--header-h);
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding:12px 0;
-}
-
-/* kleines Header-Logo: standardmäßig unsichtbar, wird beim Scrollen eingeblendet */
-.header-brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:6px 10px;
-  border-radius:14px;
-  background:#fff;
-  border:1px solid rgba(0,0,0,.06);
-  box-shadow: 0 8px 18px rgba(0,0,0,.08);
-  opacity:0;
-  pointer-events:none;
-  transform: translateY(-4px);
-  transition: .18s ease;
-}
-
-.header-brand img{
-  height:40px;
-  width:auto;
-  display:block;
-}
-
-/* wenn gescrollt: Header-Logo sichtbar */
-.site-header.is-scrolled .header-brand{
-  opacity:1;
-  pointer-events:auto;
-  transform: translateY(0);
 }
 
 /* Desktop navs */
@@ -92,7 +65,7 @@ a:hover{ text-decoration:none; }
 .nav a{
   padding:9px 12px;
   border-radius:12px;
-  font-weight:700;
+  font-weight:800;
 }
 .nav a:hover{
   background:rgba(0,0,0,.05);
@@ -101,9 +74,41 @@ a:hover{ text-decoration:none; }
 .nav-cta{
   background:var(--brand);
   color:#fff;
-  font-weight:800;
+  font-weight:900;
 }
 .nav-cta:hover{ background:var(--brand-2); }
+
+/* Header Logo: absolut mittig, erscheint beim Scroll */
+.header-brand{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#fff;
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  padding:6px 10px;
+
+  opacity:0;
+  pointer-events:none;
+  transition:.18s ease;
+}
+
+.header-brand img{
+  height:44px;
+  width:auto;
+  display:block;
+}
+
+.site-header.is-scrolled .header-brand{
+  opacity:1;
+  pointer-events:auto;
+}
 
 /* Mobile toggle */
 .nav-toggle{
@@ -124,27 +129,26 @@ a:hover{ text-decoration:none; }
   clip:rect(0,0,0,0);
 }
 
-/* Mobile dropdown */
 .nav-mobile{ display:none; }
 
-/* ================= HERO + GROSSES LOGO ================= */
+/* ================= HERO + großes Logo ================= */
 
 .hero{
   padding:44px 0 28px;
 }
 
-/* Wichtig: Logo darf NICHT unter dem Header verschwinden */
+/* Logo beginnt NACH dem Header -> niemals abgeschnitten */
 .hero-with-logo{
   position:relative;
-  padding-top: 110px; /* mehr Platz, damit nichts abgeschnitten wird */
+  padding-top: 88px; /* Platz im Hero für Logo */
 }
 
-/* Logo sitzt etwas tiefer, damit der obere Teil sichtbar bleibt */
+/* Logo sitzt unterhalb Header, ragt optisch nach oben (via translate), ohne abgeschnitten zu werden */
 .hero-logo{
   position:absolute;
   left:50%;
-  top:-40px; /* vorher -68px -> jetzt weniger negativ, also weniger "unter Header" */
-  transform:translateX(-50%);
+  top:0; /* NICHT negativ */
+  transform: translate(-50%, -36px); /* optische Überlappung nach oben */
   background:#fff;
   padding:14px 22px;
   border-radius:24px;
@@ -209,7 +213,7 @@ a:hover{ text-decoration:none; }
   border:1px solid var(--line);
   border-radius:999px;
   padding:6px 12px;
-  font-weight:800;
+  font-weight:900;
   color:#555;
 }
 
@@ -233,7 +237,7 @@ a:hover{ text-decoration:none; }
   border-radius:14px;
   border:1px solid var(--line);
   background:#fff;
-  font-weight:800;
+  font-weight:900;
   cursor:pointer;
 }
 .btn.primary{ background:var(--brand); color:#fff; }
@@ -246,47 +250,22 @@ a:hover{ text-decoration:none; }
 
 .mt16{ margin-top:16px; }
 
-label{ display:block; margin-top:16px; font-weight:800; }
-input, textarea{
-  width:100%;
-  margin-top:8px;
-  padding:12px;
-  border-radius:14px;
-  border:1px solid var(--line);
-}
-textarea{ min-height:120px; }
-
-.hp{ position:absolute; left:-9999px; }
-
-.footer{
-  margin-top:24px;
-  padding-top:14px;
-  border-top:1px solid var(--line);
-  color:var(--muted);
-}
-
 .muted{ color:var(--muted); line-height:1.55; }
 
 /* ================= MOBILE ================= */
 @media (max-width: 900px){
-  /* Desktop nav aus */
+  :root{ --header-h: 66px; }
+
   .nav-left, .nav-right{ display:none; }
-
-  /* Header-Logo immer sichtbar auf mobile (hilft bei Orientierung) */
-  .header-brand{
-    opacity:1;
-    pointer-events:auto;
-    transform:none;
-  }
-
   .nav-toggle{ display:inline-flex; }
 
   .hero-grid, .grid2, .grid3{ grid-template-columns:1fr; }
 
-  .hero-with-logo{ padding-top: 96px; }
-  .hero-logo{ top:-20px; padding:12px 16px; }
+  .hero-with-logo{ padding-top: 78px; }
+  .hero-logo{ transform: translate(-50%, -22px); padding:12px 16px; }
   .hero-logo img{ height:98px; }
 
+  /* Mobile Dropdown */
   .nav-mobile{
     position:absolute;
     right:0;
@@ -306,11 +285,9 @@ textarea{ min-height:120px; }
   .nav-mobile a{
     padding:12px 12px;
     border-radius:12px;
-    font-weight:700;
+    font-weight:800;
   }
-  .nav-mobile a:hover{
-    background:rgba(0,0,0,.05);
-  }
+  .nav-mobile a:hover{ background:rgba(0,0,0,.05); }
 
   .site-header.is-open .nav-mobile{ display:flex; }
 
