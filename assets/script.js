@@ -2,9 +2,9 @@
   const header = document.getElementById("siteHeader");
   if (!header) return;
 
-  // Scroll -> Header Logo sichtbar
+  // Header brand (mittig) ab Scroll einblenden
   const onScroll = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 80);
+    header.classList.toggle("is-scrolled", window.scrollY > 120);
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
