@@ -8,12 +8,10 @@
   <meta name="robots" content="index,follow" />
 
   <link rel="icon" href="assets/logo.png" />
-  <!-- WICHTIG: v=2 erzwingt neues CSS -->
   <link rel="stylesheet" href="assets/style.css?v=2" />
 </head>
 
 <body>
-  <a href="#main" class="skip-link">Zum Inhalt springen</a>
 
   <!-- Sticky Header -->
   <header class="site-header" id="siteHeader">
@@ -27,12 +25,14 @@
         <span class="sr-only">Menü öffnen</span>
         <span class="icon icon--hamburger" aria-hidden="true">
           <svg viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 6h16M4 12h16M4 18h16"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </span>
         <span class="icon icon--close" aria-hidden="true">
           <svg viewBox="0 0 24 24">
-            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 6l12 12M18 6L6 18"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </span>
       </button>
@@ -47,9 +47,10 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="top">
+
     <!-- HERO -->
-    <section id="top" class="hero">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="card hero-card">
           <h1>Tennisschule &amp; Padelschule</h1>
@@ -197,7 +198,6 @@
             <h3>Anfrage senden</h3>
 
             <form id="contactForm" novalidate>
-              <!-- Honeypot -->
               <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
               <label>
@@ -236,6 +236,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <script src="assets/script.js?v=1"></script>
