@@ -25,15 +25,21 @@ body{
   color:var(--text);
 }
 
-a{ color:inherit; text-decoration:none; }
-a:hover{ text-decoration:underline; }
+/* WICHTIG: Link-Styling, damit nix lila/unterstrichen aussieht */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
 
 .container{
   width:min(var(--container), calc(100% - 32px));
   margin:0 auto;
 }
 
-/* ================= HEADER (schmal) ================= */
+/* ================= HEADER ================= */
 
 .site-header{
   position:sticky;
@@ -53,31 +59,33 @@ a:hover{ text-decoration:underline; }
   padding:12px 0;
 }
 
-/* Desktop Navs */
+/* Desktop navs */
 .nav{
   display:flex;
   gap:14px;
   align-items:center;
 }
+
 .nav a{
   padding:9px 12px;
   border-radius:12px;
-  font-weight:550;
+  font-weight:600;
+  color: var(--text);
 }
 .nav a:hover{
   background:rgba(0,0,0,.05);
-  text-decoration:none;
 }
+
 .nav-cta{
   background:var(--brand);
-  color:#fff;
-  font-weight:700;
+  color:#fff !important;
+  font-weight:800;
 }
 .nav-cta:hover{ background:var(--brand-2); }
 
-/* Mobile toggle */
+/* Mobile */
 .nav-toggle{
-  display:none;
+  display:none; /* nur mobile */
   border:1px solid var(--line);
   background:#fff;
   border-radius:14px;
@@ -94,44 +102,22 @@ a:hover{ text-decoration:underline; }
   clip:rect(0,0,0,0);
 }
 
-/* Mobile nav dropdown */
+/* Mobile dropdown: default unsichtbar */
 .nav-mobile{
   display:none;
-  position:absolute;
-  right:0;
-  top:calc(100% + 10px);
-  width:min(360px, calc(100vw - 32px));
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:10px;
-  flex-direction:column;
-  gap:6px;
-  z-index:1001;
-}
-.nav-mobile a{
-  padding:12px 12px;
-  border-radius:12px;
-}
-.nav-mobile a:hover{
-  background:rgba(0,0,0,.05);
-  text-decoration:none;
 }
 
-/* ================= HERO + LOGO ÜBERLAPPUNG ================= */
+/* ================= HERO + LOGO ================= */
 
 .hero{
-  padding: 44px 0 28px;
+  padding:44px 0 28px;
 }
 
-/* Wichtig: relative, damit absolute Logo-Position garantiert wirkt */
 .hero-with-logo{
   position:relative;
-  padding-top: 86px; /* genug Platz fürs Logo ohne „Riesen-Leerraum“ */
+  padding-top: 86px; /* Platz für Logo */
 }
 
-/* Logo im Mainbereich, ragt in den Header */
 .hero-logo{
   position:absolute;
   left:50%;
@@ -144,15 +130,12 @@ a:hover{ text-decoration:underline; }
   border:1px solid rgba(0,0,0,.06);
   z-index:5;
 }
-
-/* Garantiert zentriert + keine komischen Inline-Abstände */
 .hero-logo img{
   display:block;
-  height:130px; /* groß, aber nicht „sprengt alles“ */
+  height:130px;
   width:auto;
 }
 
-/* Hero Layout */
 .hero-grid{
   display:grid;
   grid-template-columns: 1.4fr .9fr;
@@ -226,7 +209,7 @@ a:hover{ text-decoration:underline; }
   border-radius:14px;
   border:1px solid var(--line);
   background:#fff;
-  font-weight:700;
+  font-weight:800;
   cursor:pointer;
 }
 .btn.primary{ background:var(--brand); color:#fff; }
@@ -239,7 +222,7 @@ a:hover{ text-decoration:underline; }
 
 .mt16{ margin-top:16px; }
 
-label{ display:block; margin-top:16px; font-weight:700; }
+label{ display:block; margin-top:16px; font-weight:800; }
 input, textarea{
   width:100%;
   margin-top:8px;
@@ -262,21 +245,44 @@ textarea{ min-height:120px; }
 
 /* ================= MOBILE ================= */
 @media (max-width: 900px){
-  /* Desktop nav aus, Burger an */
+  /* Desktop nav aus */
   .nav-left, .nav-right{ display:none; }
+
+  /* Burger an */
   .nav-toggle{ display:inline-flex; }
 
   .hero-grid, .grid2, .grid3{ grid-template-columns:1fr; }
 
-  /* Logo kleiner + weniger Überlappung */
   .hero-with-logo{ padding-top: 72px; }
   .hero-logo{ top:-52px; padding:12px 16px; }
   .hero-logo img{ height:92px; }
 
-  /* Dropdown sichtbar wenn Header is-open */
-  .site-header.is-open .nav-mobile{
-    display:flex;
+  /* Mobile dropdown */
+  .nav-mobile{
+    position:absolute;
+    right:0;
+    top:calc(100% + 10px);
+    width:min(360px, calc(100vw - 32px));
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    padding:10px;
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    z-index:1001;
   }
+
+  .nav-mobile a{
+    padding:12px 12px;
+    border-radius:12px;
+  }
+  .nav-mobile a:hover{
+    background:rgba(0,0,0,.05);
+  }
+
+  .site-header.is-open .nav-mobile{ display:flex; }
 
   .site-header.is-open .icon--hamburger{ display:none; }
   .site-header.is-open .icon--close{ display:inline; }
