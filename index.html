@@ -102,115 +102,6 @@
             <p class="muted">Flexibel planbar. Auf Wunsch mit Trainingsplan und Zielsetzung.</p>
           </div>
         </div>
-
-        <div class="card mt24">
-          <h3>Beispiel-Angebote</h3>
-          <ul class="muted">
-            <li>Einzeltraining (Technik &amp; Taktik)</li>
-            <li>Gruppentraining (2–4 Personen)</li>
-            <li>Mannschafts-/Matchtraining</li>
-            <li>Kinderkurse nach Altersstufen</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Padel -->
-    <section id="padel" class="page alt">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">02</div>
-          <h2>Padel</h2>
-        </div>
-
-        <div class="grid3">
-          <div class="card">
-            <h3>Einsteiger</h3>
-            <p class="muted">Regeln, Grundschläge, Positionierung – schnell ins Spiel kommen.</p>
-          </div>
-          <div class="card">
-            <h3>Fortgeschritten</h3>
-            <p class="muted">Bandenspiel, Lobs, Volleys, Taktik im Doppel – effizient besser werden.</p>
-          </div>
-          <div class="card">
-            <h3>Spielpraxis</h3>
-            <p class="muted">Matchsituationen, Entscheidungsfindung, Partner-Abstimmung.</p>
-          </div>
-        </div>
-
-        <div class="card mt24">
-          <h3>Hinweis</h3>
-          <p class="muted">
-            Tennis- und Padeltraining sind getrennt organisiert — Camps bieten wir (je nach Termin) auch gemeinsam an.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Camps -->
-    <section id="camps" class="page">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">03</div>
-          <h2>Camps (Osterferien &amp; Herbstferien)</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Für wen?</h3>
-            <p class="muted">Kinder &amp; Jugendliche (ggf. auch Erwachsene nach Termin). Leistungsgruppen möglich.</p>
-            <ul class="muted">
-              <li>Technik- und Spielformen</li>
-              <li>Koordination &amp; Athletik</li>
-              <li>Matchpraxis</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Typischer Ablauf</h3>
-            <p class="muted">Beispiel (kannst du später konkretisieren):</p>
-            <ul class="muted">
-              <li>10:00–12:00 Training</li>
-              <li>12:00–13:00 Pause</li>
-              <li>13:00–15:00 Spiel &amp; Matches</li>
-            </ul>
-            <a class="btn primary mt16" href="#kontakt">Camp anfragen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Über uns -->
-    <section id="ueberuns" class="page alt">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">04</div>
-          <h2>Über uns</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>HEISE TENNIS</h3>
-            <p class="muted">
-              Kurzer Text über Philosophie, Training, Werte, Standort/Anlage und für wen ihr da seid.
-              (Den Inhalt kannst du später jederzeit ändern.)
-            </p>
-            <div class="signature">
-              <strong>Heise Tennis</strong>
-              <span class="muted">Tennis- &amp; Padelschule</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Was uns wichtig ist</h3>
-            <ul class="muted">
-              <li>Strukturiertes Training mit Spaß</li>
-              <li>Klare Ziele &amp; Feedback</li>
-              <li>Passende Gruppen &amp; individuelle Förderung</li>
-              <li>Moderne Methoden &amp; viel Spielpraxis</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -226,9 +117,9 @@
           <div class="card">
             <h3>Anfrage senden</h3>
 
-            <!-- Erstmal ohne Backend: Mailto + Validierung im JS -->
+            <!-- Kontaktformular mit Honeypot -->
             <form id="contactForm" novalidate>
-              <input class="hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
               <label>
                 Name
