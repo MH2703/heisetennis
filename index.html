@@ -8,20 +8,38 @@
   <meta name="robots" content="index,follow" />
 
   <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="assets/style.css?v=2" />
+  <!-- v=3 damit Änderungen sicher sichtbar sind -->
+  <link rel="stylesheet" href="assets/style.css?v=3" />
 </head>
 
 <body>
 
   <!-- Sticky Header -->
   <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Start">
-        <img src="assets/logo.png" alt="HEISE TENNIS Logo" class="brand-logo" />
-      </a>
+    <div class="container header-inner header-centered">
 
-      <button class="nav-toggle" type="button"
-        aria-controls="primaryNav" aria-expanded="false">
+      <!-- Left navigation -->
+      <div class="nav-wrap" id="primaryNav" aria-label="Hauptnavigation">
+        <nav class="nav nav-left" aria-label="Navigation links">
+          <a href="#tennis">Tennis</a>
+          <a href="#padel">Padel</a>
+        </nav>
+
+        <!-- Center logo -->
+        <a class="brand brand-center" href="#top" aria-label="Start">
+          <img src="assets/logo.png" alt="HEISE TENNIS Logo" class="brand-logo brand-logo--xl" />
+        </a>
+
+        <!-- Right navigation -->
+        <nav class="nav nav-right" aria-label="Navigation rechts">
+          <a href="#camps">Camps</a>
+          <a href="#ueberuns">Über uns</a>
+          <a href="#kontakt" class="nav-cta">Kontakt</a>
+        </nav>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="nav-toggle" type="button" aria-controls="primaryNav" aria-expanded="false">
         <span class="sr-only">Menü öffnen</span>
         <span class="icon icon--hamburger" aria-hidden="true">
           <svg viewBox="0 0 24 24">
@@ -37,13 +55,6 @@
         </span>
       </button>
 
-      <nav class="nav" id="primaryNav" aria-label="Hauptnavigation">
-        <a href="#tennis">Tennis</a>
-        <a href="#padel">Padel</a>
-        <a href="#camps">Camps</a>
-        <a href="#ueberuns">Über uns</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
-      </nav>
     </div>
   </header>
 
