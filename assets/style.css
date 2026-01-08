@@ -11,8 +11,6 @@
   --radius:18px;
   --shadow:0 10px 30px rgba(0,0,0,.08);
   --container:1100px;
-
-  --header-h: 72px; /* feste Header-Höhe -> Logo kann nicht "drunter" rutschen */
 }
 
 *{ box-sizing:border-box; }
@@ -28,19 +26,19 @@ body{
 }
 
 a{ color:inherit; text-decoration:none; }
+a:hover{ text-decoration:underline; }
 
 .container{
   width:min(var(--container), calc(100% - 32px));
   margin:0 auto;
 }
 
-/* ================= HEADER ================= */
+/* ================= HEADER (schmal) ================= */
 
 .site-header{
   position:sticky;
   top:0;
   z-index:1000;
-  height: var(--header-h);
   background:rgba(244,245,246,.97);
   border-bottom:1px solid var(--line);
   backdrop-filter: blur(10px);
@@ -48,67 +46,34 @@ a{ color:inherit; text-decoration:none; }
 
 .header-inner{
   position:relative;
-  height: var(--header-h);
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:16px;
+  padding:12px 0;
 }
 
-/* Desktop navs */
+/* Desktop Navs */
 .nav{
   display:flex;
   gap:14px;
   align-items:center;
 }
-
 .nav a{
   padding:9px 12px;
   border-radius:12px;
-  font-weight:800;
+  font-weight:550;
 }
 .nav a:hover{
   background:rgba(0,0,0,.05);
+  text-decoration:none;
 }
-
 .nav-cta{
   background:var(--brand);
   color:#fff;
-  font-weight:900;
+  font-weight:700;
 }
 .nav-cta:hover{ background:var(--brand-2); }
-
-/* Header Logo: absolut mittig, erscheint beim Scroll */
-.header-brand{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform: translate(-50%, -50%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:#fff;
-  border:1px solid rgba(0,0,0,.06);
-  border-radius:16px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.10);
-  padding:6px 10px;
-
-  opacity:0;
-  pointer-events:none;
-  transition:.18s ease;
-}
-
-.header-brand img{
-  height:44px;
-  width:auto;
-  display:block;
-}
-
-.site-header.is-scrolled .header-brand{
-  opacity:1;
-  pointer-events:auto;
-}
 
 /* Mobile toggle */
 .nav-toggle{
@@ -129,26 +94,49 @@ a{ color:inherit; text-decoration:none; }
   clip:rect(0,0,0,0);
 }
 
-.nav-mobile{ display:none; }
+/* Mobile nav dropdown */
+.nav-mobile{
+  display:none;
+  position:absolute;
+  right:0;
+  top:calc(100% + 10px);
+  width:min(360px, calc(100vw - 32px));
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:10px;
+  flex-direction:column;
+  gap:6px;
+  z-index:1001;
+}
+.nav-mobile a{
+  padding:12px 12px;
+  border-radius:12px;
+}
+.nav-mobile a:hover{
+  background:rgba(0,0,0,.05);
+  text-decoration:none;
+}
 
-/* ================= HERO + großes Logo ================= */
+/* ================= HERO + LOGO ÜBERLAPPUNG ================= */
 
 .hero{
-  padding:44px 0 28px;
+  padding: 44px 0 28px;
 }
 
-/* Logo beginnt NACH dem Header -> niemals abgeschnitten */
+/* Wichtig: relative, damit absolute Logo-Position garantiert wirkt */
 .hero-with-logo{
   position:relative;
-  padding-top: 88px; /* Platz im Hero für Logo */
+  padding-top: 86px; /* genug Platz fürs Logo ohne „Riesen-Leerraum“ */
 }
 
-/* Logo sitzt unterhalb Header, ragt optisch nach oben (via translate), ohne abgeschnitten zu werden */
+/* Logo im Mainbereich, ragt in den Header */
 .hero-logo{
   position:absolute;
   left:50%;
-  top:0; /* NICHT negativ */
-  transform: translate(-50%, -36px); /* optische Überlappung nach oben */
+  top:-68px; /* ragt in Header */
+  transform:translateX(-50%);
   background:#fff;
   padding:14px 22px;
   border-radius:24px;
@@ -157,9 +145,10 @@ a{ color:inherit; text-decoration:none; }
   z-index:5;
 }
 
+/* Garantiert zentriert + keine komischen Inline-Abstände */
 .hero-logo img{
   display:block;
-  height:130px;
+  height:130px; /* groß, aber nicht „sprengt alles“ */
   width:auto;
 }
 
@@ -213,7 +202,7 @@ a{ color:inherit; text-decoration:none; }
   border:1px solid var(--line);
   border-radius:999px;
   padding:6px 12px;
-  font-weight:900;
+  font-weight:800;
   color:#555;
 }
 
@@ -237,7 +226,7 @@ a{ color:inherit; text-decoration:none; }
   border-radius:14px;
   border:1px solid var(--line);
   background:#fff;
-  font-weight:900;
+  font-weight:700;
   cursor:pointer;
 }
 .btn.primary{ background:var(--brand); color:#fff; }
@@ -250,46 +239,44 @@ a{ color:inherit; text-decoration:none; }
 
 .mt16{ margin-top:16px; }
 
+label{ display:block; margin-top:16px; font-weight:700; }
+input, textarea{
+  width:100%;
+  margin-top:8px;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+}
+textarea{ min-height:120px; }
+
+.hp{ position:absolute; left:-9999px; }
+
+.footer{
+  margin-top:24px;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+}
+
 .muted{ color:var(--muted); line-height:1.55; }
 
 /* ================= MOBILE ================= */
 @media (max-width: 900px){
-  :root{ --header-h: 66px; }
-
+  /* Desktop nav aus, Burger an */
   .nav-left, .nav-right{ display:none; }
   .nav-toggle{ display:inline-flex; }
 
   .hero-grid, .grid2, .grid3{ grid-template-columns:1fr; }
 
-  .hero-with-logo{ padding-top: 78px; }
-  .hero-logo{ transform: translate(-50%, -22px); padding:12px 16px; }
-  .hero-logo img{ height:98px; }
+  /* Logo kleiner + weniger Überlappung */
+  .hero-with-logo{ padding-top: 72px; }
+  .hero-logo{ top:-52px; padding:12px 16px; }
+  .hero-logo img{ height:92px; }
 
-  /* Mobile Dropdown */
-  .nav-mobile{
-    position:absolute;
-    right:0;
-    top:calc(100% + 10px);
-    width:min(360px, calc(100vw - 32px));
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:16px;
-    box-shadow:var(--shadow);
-    padding:10px;
-    display:none;
-    flex-direction:column;
-    gap:6px;
-    z-index:1001;
+  /* Dropdown sichtbar wenn Header is-open */
+  .site-header.is-open .nav-mobile{
+    display:flex;
   }
-
-  .nav-mobile a{
-    padding:12px 12px;
-    border-radius:12px;
-    font-weight:800;
-  }
-  .nav-mobile a:hover{ background:rgba(0,0,0,.05); }
-
-  .site-header.is-open .nav-mobile{ display:flex; }
 
   .site-header.is-open .icon--hamburger{ display:none; }
   .site-header.is-open .icon--close{ display:inline; }
