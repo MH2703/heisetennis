@@ -8,27 +8,33 @@
   <meta name="robots" content="index,follow" />
 
   <link rel="icon" href="assets/logo.png" />
-  <!-- Cache-Fix -->
-  <link rel="stylesheet" href="assets/style.css?v=5" />
+  <link rel="stylesheet" href="assets/style.css?v=9" />
 </head>
 
 <body>
 
-  <!-- Schmaler Header -->
   <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
+    <div class="container header-inner header-grid">
 
+      <!-- LINKS (gleich breit wie rechts) -->
       <nav class="nav nav-left" aria-label="Navigation links">
         <a href="#tennis">Tennis</a>
         <a href="#padel">Padel</a>
       </nav>
 
+      <!-- MITTE: Logo im Header (wird beim Scroll eingeblendet) -->
+      <a class="header-brand" href="#top" aria-label="Start">
+        <img src="assets/logo.png" alt="HEISE TENNIS" />
+      </a>
+
+      <!-- RECHTS -->
       <nav class="nav nav-right" aria-label="Navigation rechts">
         <a href="#camps">Camps</a>
         <a href="#ueberuns">Über uns</a>
         <a href="#kontakt" class="nav-cta">Kontakt</a>
       </nav>
 
+      <!-- Mobile Burger -->
       <button class="nav-toggle" type="button" aria-controls="mobileNav" aria-expanded="false">
         <span class="sr-only">Menü öffnen</span>
         <span class="icon icon--hamburger" aria-hidden="true">
@@ -43,7 +49,7 @@
         </span>
       </button>
 
-      <!-- Mobile Navigation (Dropdown) -->
+      <!-- Mobile Dropdown Navigation -->
       <nav class="nav-mobile" id="mobileNav" aria-label="Mobile Navigation">
         <a href="#tennis">Tennis</a>
         <a href="#padel">Padel</a>
@@ -57,11 +63,11 @@
 
   <main id="top">
 
-    <!-- HERO / Startbereich -->
+    <!-- HERO -->
     <section class="hero hero-with-logo">
 
-      <!-- Logo gehört zum Mainbereich, ragt aber in den Header -->
-      <div class="hero-logo" aria-hidden="false">
+      <!-- großes Logo im Startbereich -->
+      <div class="hero-logo">
         <img src="assets/logo.png" alt="HEISE TENNIS Logo" />
       </div>
 
@@ -146,110 +152,8 @@
       </div>
     </section>
 
-    <!-- CAMPS -->
-    <section id="camps" class="page">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">03</div>
-          <h2>Camps</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Oster- &amp; Herbstferien</h3>
-            <p class="muted">Intensives Training, Spiel &amp; Spaß – je nach Termin Tennis, Padel oder kombiniert.</p>
-          </div>
-          <div class="card">
-            <h3>Jetzt anfragen</h3>
-            <p class="muted">Termine &amp; Details gerne auf Anfrage.</p>
-            <a class="btn primary mt16" href="#kontakt">Camp anfragen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ÜBER UNS -->
-    <section id="ueberuns" class="page alt">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">04</div>
-          <h2>Über uns</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>HEISE TENNIS</h3>
-            <p class="muted">
-              Moderne Tennis- &amp; Padelschule mit klarer Trainingsstruktur,
-              individueller Betreuung und Freude am Spiel.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Unsere Werte</h3>
-            <ul class="muted">
-              <li>Qualität &amp; Struktur</li>
-              <li>Individuelle Förderung</li>
-              <li>Motivation &amp; Spaß</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section id="kontakt" class="page">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">05</div>
-          <h2>Kontakt</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Anfrage senden</h3>
-
-            <form id="contactForm" novalidate>
-              <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-              <label>
-                Name
-                <input id="name" type="text" required placeholder="Dein Name" />
-              </label>
-
-              <label>
-                E-Mail
-                <input id="email" type="email" required placeholder="name@mail.de" />
-              </label>
-
-              <label>
-                Nachricht
-                <textarea id="message" required placeholder="Worum geht’s? (Tennis, Padel, Camp …)"></textarea>
-              </label>
-
-              <button type="submit" class="btn primary mt16">Anfrage vorbereiten</button>
-              <div id="status" class="status" aria-live="polite"></div>
-            </form>
-          </div>
-
-          <div class="card">
-            <h3>Direkter Kontakt</h3>
-            <p class="muted">
-              <strong>E-Mail:</strong> <a href="mailto:info@heisetennis.de">info@heisetennis.de</a><br />
-              <strong>Telefon:</strong> <a href="tel:+49123456789">+49 123 456 789</a>
-            </p>
-
-            <div class="footer">
-              © <span id="year"></span> HEISE TENNIS ·
-              <a href="impressum.html">Impressum</a> ·
-              <a href="datenschutz.html">Datenschutz</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <script src="assets/script.js?v=1"></script>
+  <script src="assets/script.js?v=4"></script>
 </body>
 </html>
