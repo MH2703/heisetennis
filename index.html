@@ -57,10 +57,6 @@
           <a class="btn btn-outline" href="#padel">Padel</a>
           <a class="btn btn-ghost" href="#camps">Camps ansehen</a>
         </div>
-
-        <div class="hero-hint">
-          <span class="dot"></span> Sticky-Header bleibt immer sichtbar – du kannst jederzeit springen.
-        </div>
       </div>
     </section>
 
@@ -165,7 +161,6 @@
           </p>
         </div>
 
-        <!-- Camp selection cards -->
         <div class="grid camp-grid">
           <button class="camp-card" type="button" data-camp="ostern" aria-expanded="false">
             <div class="camp-card-top">
@@ -198,9 +193,7 @@
           </button>
         </div>
 
-        <!-- Camp details area -->
         <div class="camp-details" id="campDetails" aria-live="polite">
-          <!-- Ostern -->
           <article class="camp-panel" id="camp-ostern" hidden>
             <div class="camp-panel-head">
               <h3>Ostercamp</h3>
@@ -236,7 +229,6 @@
             </div>
           </article>
 
-          <!-- Sommer -->
           <article class="camp-panel" id="camp-sommer" hidden>
             <div class="camp-panel-head">
               <h3>Sommercamps</h3>
@@ -302,7 +294,6 @@
             </div>
           </article>
 
-          <!-- Herbst -->
           <article class="camp-panel" id="camp-herbst" hidden>
             <div class="camp-panel-head">
               <h3>Herbstcamp</h3>
@@ -357,7 +348,6 @@
 
         <div class="profile">
           <div class="profile-photo" aria-label="Foto Platzhalter">
-            <!-- Hier später ein echtes Foto einsetzen -->
             <span>Foto</span>
           </div>
 
@@ -463,9 +453,7 @@
               </button>
             </div>
 
-            <div class="map-embed" id="mapEmbed" hidden>
-              <!-- iframe wird per JS eingefügt -->
-            </div>
+            <div class="map-embed" id="mapEmbed" hidden></div>
           </div>
         </div>
       </div>
@@ -522,9 +510,6 @@
         <div class="form-wrap">
           <h3>Anfrageformular</h3>
 
-          <!-- Hinweis: Auf GitHub Pages kann ein Formular nicht "von selbst" E-Mails senden.
-               Option 1: Formspree (empfohlen): action="https://formspree.io/f/DEINCODE"
-               Option 2: später WordPress: echtes Formular-Plugin -->
           <form class="form" action="#" method="post">
             <div class="grid two">
               <label>
