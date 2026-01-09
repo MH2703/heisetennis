@@ -125,7 +125,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
 .nav-cta{ margin-left: 4px; }
 
-/* HERO: passt in den Screen, Logo skaliert automatisch */
+/* HERO: passt in den Screen, Logo bleibt IMMER proportional */
 .hero{
   min-height: calc(100vh - var(--header-h));
   padding: 18px 0 22px;
@@ -138,17 +138,19 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   flex-direction:column;
   align-items:center;
   gap: 10px;
-
   max-width: 900px;
   margin: 0 auto;
 }
+
+/* WICHTIG: Höhe steuern, Breite automatisch -> kein Verzerren */
 .hero-logo{
-  width: clamp(220px, 46vw, 420px);
-  max-height: 38vh;
-  height: auto;
+  height: clamp(170px, 34vh, 320px);
+  width: auto;
+  max-width: 80vw;
   display:block;
   filter: drop-shadow(0 16px 28px rgba(0,0,0,.10));
 }
+
 .hero-title{
   margin: 2px 0 0;
   font-size: clamp(24px, 3.2vw, 40px);
@@ -573,11 +575,11 @@ input:focus, select:focus, textarea:focus{
   .grid.two{ grid-template-columns: 1fr; }
   .summer-grid{ grid-template-columns: 1fr; }
 
-  /* Hero noch kompakter auf kleinen Screens */
   .hero{ padding: 14px 0 18px; }
   .hero-logo{
-    width: clamp(200px, 78vw, 340px);
-    max-height: 34vh;
+    height: clamp(140px, 30vh, 240px);
+    width: auto;
+    max-width: 86vw;
   }
   .hero-actions{ gap: 10px; }
 
