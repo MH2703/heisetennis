@@ -57,7 +57,6 @@ const setActive = (id) => {
 if ("IntersectionObserver" in window && sections.length) {
   const io = new IntersectionObserver(
     (entries) => {
-      // find entry with highest intersection ratio that is intersecting
       const visible = entries
         .filter((e) => e.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
@@ -99,7 +98,6 @@ const showCamp = (key) => {
   const card = campCards.find((c) => c.dataset.camp === key);
   if (card) card.setAttribute("aria-expanded", "true");
 
-  // smooth scroll into view (detail area)
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
@@ -108,7 +106,6 @@ campCards.forEach((btn) => {
     const key = btn.dataset.camp;
     const panel = campPanels[key];
 
-    // toggle if already open
     const isOpen = panel && !panel.hidden;
     if (isOpen) {
       hideAllCamps();
@@ -133,7 +130,6 @@ if (toggleTimeline && timelineMore) {
 
 /**
  * Click-to-load Google Maps
- * Note: This loads an embed only after user clicks.
  */
 const loadMapBtn = $("#loadMapBtn");
 const mapEmbed = $("#mapEmbed");
@@ -141,7 +137,6 @@ const mapPlaceholder = $("#mapPlaceholder");
 
 if (loadMapBtn && mapEmbed && mapPlaceholder) {
   loadMapBtn.addEventListener("click", () => {
-    // embed URL: can be adjusted anytime
     const src =
       "https://www.google.com/maps?q=TC%20Angertal%20Ernst-Stinshoff-Stra%C3%9Fe%2050%2040883%20Ratingen&output=embed";
 
