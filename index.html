@@ -3,236 +3,590 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HEISE TENNIS – Tennisschule & Padelschule</title>
-  <meta name="description" content="HEISE TENNIS – Tennisschule & Padelschule. Training für Kinder, Jugendliche und Erwachsene. Camps in den Oster- und Herbstferien." />
-  <meta name="robots" content="index,follow" />
-
-  <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="assets/style.css?v=10" />
+  <title>Tennisschule Heise | Tennis & Padel in Ratingen</title>
+  <meta name="description" content="Tennis- & Padeltraining in Ratingen für Kinder, Jugendliche und Erwachsene. Feriencamps (Oster-, Sommer-, Herbstcamps) und ganzjähriges Training am TC Angertal." />
+  <meta name="theme-color" content="#E85808" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#content">Zum Inhalt springen</a>
 
-  <!-- STICKY HEADER (ORANGE) -->
-  <header class="site-header" id="siteHeader">
+  <!-- Sticky Header -->
+  <header class="site-header" id="top">
     <div class="container header-inner">
-
-      <a class="brand" href="#top" aria-label="Start">
-        <img src="assets/logo.png" alt="HEISE TENNIS Logo" class="brand-logo" />
+      <a class="brand" href="#top" aria-label="Zur Startseite">
+        <img class="brand-logo" src="assets/logo.png" alt="Tennisschule Heise Logo" />
       </a>
 
-      <button class="nav-toggle" type="button" aria-controls="mobileNav" aria-expanded="false">
-        <span class="sr-only">Menü öffnen</span>
-        <span class="icon icon--hamburger" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="icon icon--close" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
-      </button>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navList">
+          Menü
+        </button>
 
-      <nav class="nav nav-desktop" aria-label="Hauptnavigation">
-        <a href="#tennis">Tennis</a>
-        <a href="#padel">Padel</a>
-        <a href="#camps">Camps</a>
-        <a href="#ueberuns">Über uns</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
+        <ul class="nav-list" id="navList">
+          <li><a class="nav-link" href="#tennis" data-section="tennis">Tennis</a></li>
+          <li><a class="nav-link" href="#padel" data-section="padel">Padel</a></li>
+          <li><a class="nav-link" href="#camps" data-section="camps">Camps</a></li>
+          <li><a class="nav-link" href="#inhaberin" data-section="inhaberin">Inhaberin</a></li>
+          <li><a class="nav-link" href="#standort" data-section="standort">Standort</a></li>
+          <li><a class="nav-link" href="#downloads" data-section="downloads">Downloads</a></li>
+          <li><a class="nav-link" href="#kontakt" data-section="kontakt">Kontakt</a></li>
+          <li class="nav-cta">
+            <a class="btn btn-primary btn-sm" href="#kontakt">Anfragen</a>
+          </li>
+        </ul>
       </nav>
-
-      <nav class="nav nav-mobile" id="mobileNav" aria-label="Mobile Navigation">
-        <a href="#tennis">Tennis</a>
-        <a href="#padel">Padel</a>
-        <a href="#camps">Camps</a>
-        <a href="#ueberuns">Über uns</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
-      </nav>
-
     </div>
   </header>
 
-  <main id="top">
+  <main id="content">
+    <!-- HERO -->
+    <section class="hero" aria-label="Start">
+      <div class="container hero-inner">
+        <img class="hero-logo" src="assets/logo.png" alt="Tennisschule Heise" />
 
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="card hero-card">
-          <h1>Tennisschule &amp; Padelschule</h1>
-          <p class="muted">
-            Professionelles Training für Kinder, Jugendliche &amp; Erwachsene –
-            strukturiert, modern und mit Freude am Sport.
+        <h1 class="hero-title">Tennis &amp; Padel in Ratingen</h1>
+        <p class="hero-subtitle">
+          Training, Camps &amp; Coaching für Kinder, Jugendliche und Erwachsene.
+          Ganzjähriges Training am TC Angertal.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#tennis">Tennis</a>
+          <a class="btn btn-outline" href="#padel">Padel</a>
+          <a class="btn btn-ghost" href="#camps">Camps ansehen</a>
+        </div>
+
+        <div class="hero-hint">
+          <span class="dot"></span> Sticky-Header bleibt immer sichtbar – du kannst jederzeit springen.
+        </div>
+      </div>
+    </section>
+
+    <!-- TENNIS -->
+    <section class="section" id="tennis">
+      <div class="container">
+        <div class="section-head">
+          <h2>Tennistraining mit Struktur und Erfahrung</h2>
+          <p>
+            Ob erste Schritte auf dem Platz oder ambitioniertes Leistungstraining – unser Tennistraining richtet sich an
+            Kinder, Jugendliche und Erwachsene aller Spielstärken. Im Mittelpunkt stehen saubere Technik, spielnahe
+            Übungen und persönliche Betreuung.
           </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#kontakt">Training anfragen</a>
-            <a class="btn ghost" href="#camps">Zu den Camps</a>
-          </div>
-
-          <div class="contact-meta muted">
-            oder direkt:
-            <a href="mailto:info@heisetennis.de">info@heisetennis.de</a>
-            · <a href="tel:+49123456789">+49 123 456 789</a>
-          </div>
-        </div>
-
-        <div class="card hero-card hero-highlight">
-          <h2>Neu: Padel Training</h2>
-          <p class="muted">
-            Einsteiger- und Fortgeschrittenentraining, Gruppen &amp; Einzel –
-            schnell ins Spiel kommen und besser werden.
+          <p>
+            Das Training findet ganzjährig auf der Anlage des TC Angertal statt. In den Wintermonaten steht eine
+            <strong>Tennishalle</strong> zur Verfügung, sodass kontinuierliches Training ohne Unterbrechung möglich ist.
           </p>
-          <a class="btn secondary" href="#padel">Padel ansehen</a>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <h3>Kindertraining</h3>
+            <p>Spielerisch, motivierend, mit klaren Lernzielen.</p>
+          </article>
+          <article class="card">
+            <h3>Jugendtraining</h3>
+            <p>Technik, Taktik und Matchpraxis – passend zur Spielstärke.</p>
+          </article>
+          <article class="card">
+            <h3>Erwachsenentraining</h3>
+            <p>Vom Einstieg bis zum ambitionierten Spiel – strukturiert &amp; effektiv.</p>
+          </article>
+          <article class="card">
+            <h3>Einzel- &amp; Gruppentraining</h3>
+            <p>Individuelle Schwerpunkte – im Einzel oder in kleinen Gruppen.</p>
+          </article>
+          <article class="card">
+            <h3>Mannschaft &amp; Wettkampf</h3>
+            <p>Matchvorbereitung, Taktik und Begleitung – nach Absprache.</p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn-primary" href="#kontakt">Tennis anfragen</a>
         </div>
       </div>
     </section>
 
-    <section id="tennis" class="page">
+    <!-- PADEL -->
+    <section class="section" id="padel">
       <div class="container">
-        <div class="chapter">
-          <div class="num">01</div>
-          <h2>Tennis</h2>
+        <div class="section-head">
+          <h2>Padel – dynamisch, modern und für alle Levels</h2>
+          <p>
+            Padel verbindet Technik, Taktik und Spielfreude. Durch schnelle Erfolgserlebnisse eignet sich der Sport
+            sowohl für Einsteiger als auch für erfahrene Spielerinnen und Spieler.
+          </p>
+          <p>
+            Das Padeltraining findet auf der Anlage des <strong>TC Angertal</strong> statt. In den Wintermonaten werden
+            Trainingseinheiten je nach Bedarf in <strong>verschiedenen Padelhallen</strong> durchgeführt – die Planung
+            erfolgt individuell in Absprache mit den Teilnehmenden.
+          </p>
         </div>
 
-        <div class="grid3">
-          <div class="card">
-            <h3>Kinder &amp; Jugend</h3>
-            <p class="muted">Altersgerechtes Training mit Technik, Koordination &amp; Spiel.</p>
-          </div>
-          <div class="card">
-            <h3>Erwachsene</h3>
-            <p class="muted">Einsteiger bis Mannschaftsspieler – Technik, Taktik &amp; Matchpraxis.</p>
-          </div>
-          <div class="card">
-            <h3>Einzel / Gruppe</h3>
-            <p class="muted">Flexibel planbar – individuell oder in kleinen Gruppen.</p>
-          </div>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Einsteigerkurse</h3>
+            <p>Schnell reinfinden – Regeln, Grundschläge, Spielfluss.</p>
+          </article>
+          <article class="card">
+            <h3>Technik &amp; Taktik</h3>
+            <p>Positionsspiel, Bande, Lobs und Entscheidungsfindung.</p>
+          </article>
+          <article class="card">
+            <h3>Matchtraining</h3>
+            <p>Spielnahe Einheiten mit klaren Zielen und Feedback.</p>
+          </article>
+          <article class="card">
+            <h3>Gruppen &amp; Events</h3>
+            <p>Trainingsgruppen, Themenabende – nach Absprache.</p>
+          </article>
+          <article class="card">
+            <h3>Einzelstunden</h3>
+            <p>Individuelle Schwerpunkte – effizient und fokussiert.</p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn-primary" href="#kontakt">Padel anfragen</a>
         </div>
       </div>
     </section>
 
-    <section id="padel" class="page alt">
+    <!-- CAMPS -->
+    <section class="section" id="camps">
       <div class="container">
-        <div class="chapter">
-          <div class="num">02</div>
-          <h2>Padel</h2>
+        <div class="section-head">
+          <h2>Feriencamps – Tennis &amp; Padel intensiv erleben</h2>
+          <p>
+            In unseren Camps verbinden wir intensives Training mit abwechslungsreichen Einheiten und professioneller
+            Betreuung. Die Camps richten sich an Kinder, Jugendliche und Erwachsene.
+          </p>
         </div>
 
-        <div class="grid3">
-          <div class="card">
-            <h3>Einsteiger</h3>
-            <p class="muted">Regeln, Grundschläge &amp; Spielverständnis.</p>
-          </div>
-          <div class="card">
-            <h3>Fortgeschritten</h3>
-            <p class="muted">Bandenspiel, Taktik &amp; Matchstrategien.</p>
-          </div>
-          <div class="card">
-            <h3>Spielpraxis</h3>
-            <p class="muted">Matches, Coaching &amp; Feedback.</p>
-          </div>
+        <!-- Camp selection cards -->
+        <div class="grid camp-grid">
+          <button class="camp-card" type="button" data-camp="ostern" aria-expanded="false">
+            <div class="camp-card-top">
+              <span class="badge">Ostercamp</span>
+              <span class="pill">Tennis &amp; Padel</span>
+            </div>
+            <h3>Kinder · Jugendliche · Erwachsene</h3>
+            <p>Technik, Taktik &amp; Matchpraxis – Saisonstart mit Struktur.</p>
+            <span class="camp-card-link">Details ansehen</span>
+          </button>
+
+          <button class="camp-card" type="button" data-camp="sommer" aria-expanded="false">
+            <div class="camp-card-top">
+              <span class="badge">Sommercamps</span>
+              <span class="pill">TC Angertal</span>
+            </div>
+            <h3>4 Formate – 1. &amp; 6. Ferienwoche</h3>
+            <p>Kids/Jugend vormittags inkl. Mittagessen · Erwachsene abends.</p>
+            <span class="camp-card-link">Details ansehen</span>
+          </button>
+
+          <button class="camp-card" type="button" data-camp="herbst" aria-expanded="false">
+            <div class="camp-card-top">
+              <span class="badge">Herbstcamp</span>
+              <span class="pill">Tennis &amp; Padel</span>
+            </div>
+            <h3>Kinder · Jugendliche · Erwachsene</h3>
+            <p>Intensiv trainieren oder gezielt an Details arbeiten.</p>
+            <span class="camp-card-link">Details ansehen</span>
+          </button>
         </div>
+
+        <!-- Camp details area -->
+        <div class="camp-details" id="campDetails" aria-live="polite">
+          <!-- Ostern -->
+          <article class="camp-panel" id="camp-ostern" hidden>
+            <div class="camp-panel-head">
+              <h3>Ostercamp</h3>
+              <p class="muted">Tennis &amp; Padel · Kinder, Jugendliche &amp; Erwachsene</p>
+            </div>
+
+            <div class="grid two">
+              <div class="info-box">
+                <h4>Inhalte</h4>
+                <ul>
+                  <li>Strukturierte Trainingseinheiten</li>
+                  <li>Technik &amp; Taktik</li>
+                  <li>Matchpraxis</li>
+                  <li>Betreuung durch erfahrene Trainer</li>
+                </ul>
+              </div>
+              <div class="info-box">
+                <h4>Ort &amp; Unterkunft</h4>
+                <ul>
+                  <li>Club oder Mallorca (je nach Termin)</li>
+                  <li>Unterkunft: i. d. R. Stammhotel</li>
+                  <li><strong>Hinweis:</strong> Ostern 2027 Ausweichhotel (Renovierung) – Details auf Anfrage</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="price-row">
+              <div class="price-box">
+                <h4>Kosten</h4>
+                <p class="muted">Training und Unterkunft werden getrennt ausgewiesen (je nach Campformat).</p>
+              </div>
+              <a class="btn btn-primary" href="#kontakt">Ostercamp anfragen</a>
+            </div>
+          </article>
+
+          <!-- Sommer -->
+          <article class="camp-panel" id="camp-sommer" hidden>
+            <div class="camp-panel-head">
+              <h3>Sommercamps</h3>
+              <p class="muted">
+                Ort: <strong>TC Angertal</strong>, Ernst-Stinshoff-Straße 50, 40883 Ratingen
+              </p>
+            </div>
+
+            <div class="grid summer-grid">
+              <div class="subcard">
+                <h4>Kinder &amp; Jugendcamp · 1. Ferienwoche</h4>
+                <p class="muted"><strong>09:00–14:00</strong> · inkl. Mittagessen</p>
+                <ul>
+                  <li>Techniktraining</li>
+                  <li>Koordination &amp; Athletik</li>
+                  <li>Matchpraxis</li>
+                  <li>Betreuung während der gesamten Campzeit</li>
+                </ul>
+                <a class="btn btn-outline btn-sm" href="#kontakt">Anfragen</a>
+              </div>
+
+              <div class="subcard">
+                <h4>Kinder &amp; Jugendcamp · 6. Ferienwoche</h4>
+                <p class="muted"><strong>09:00–14:00</strong> · inkl. Mittagessen</p>
+                <ul>
+                  <li>Techniktraining</li>
+                  <li>Koordination &amp; Athletik</li>
+                  <li>Matchpraxis</li>
+                  <li>Betreuung während der gesamten Campzeit</li>
+                </ul>
+                <a class="btn btn-outline btn-sm" href="#kontakt">Anfragen</a>
+              </div>
+
+              <div class="subcard">
+                <h4>Erwachsenencamp · 1. Ferienwoche</h4>
+                <p class="muted"><strong>17:30–20:00</strong></p>
+                <ul>
+                  <li>Technik &amp; Taktik</li>
+                  <li>Matchplay</li>
+                  <li>Individuelle Schwerpunkte je Gruppe</li>
+                </ul>
+                <a class="btn btn-outline btn-sm" href="#kontakt">Anfragen</a>
+              </div>
+
+              <div class="subcard">
+                <h4>Erwachsenencamp · 6. Ferienwoche</h4>
+                <p class="muted"><strong>17:30–20:00</strong></p>
+                <ul>
+                  <li>Technik &amp; Taktik</li>
+                  <li>Matchplay</li>
+                  <li>Individuelle Schwerpunkte je Gruppe</li>
+                </ul>
+                <a class="btn btn-outline btn-sm" href="#kontakt">Anfragen</a>
+              </div>
+            </div>
+
+            <div class="price-row">
+              <div class="price-box">
+                <h4>Kosten</h4>
+                <p class="muted">Preise und Details (z. B. Gruppengrößen, Inhalte) teilen wir gerne auf Anfrage mit.</p>
+              </div>
+              <a class="btn btn-primary" href="#kontakt">Sommercamp anfragen</a>
+            </div>
+          </article>
+
+          <!-- Herbst -->
+          <article class="camp-panel" id="camp-herbst" hidden>
+            <div class="camp-panel-head">
+              <h3>Herbstcamp</h3>
+              <p class="muted">Tennis &amp; Padel · Kinder, Jugendliche &amp; Erwachsene</p>
+            </div>
+
+            <div class="grid two">
+              <div class="info-box">
+                <h4>Inhalte</h4>
+                <ul>
+                  <li>Technik, Taktik &amp; Matchpraxis</li>
+                  <li>Individuelle Schwerpunkte je Gruppe</li>
+                  <li>Professionelle Betreuung</li>
+                </ul>
+              </div>
+              <div class="info-box">
+                <h4>Ort</h4>
+                <ul>
+                  <li>Club oder Mallorca (je nach Termin)</li>
+                  <li>Details &amp; Format auf Anfrage</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="price-row">
+              <div class="price-box">
+                <h4>Kosten</h4>
+                <p class="muted">Je nach Campformat – wir senden dir gerne alle Informationen zu.</p>
+              </div>
+              <a class="btn btn-primary" href="#kontakt">Herbstcamp anfragen</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="fineprint">
+          Feriencamps gelten als verbindlich gebucht. Details zu Stornierungsfristen findest du in unseren
+          <a href="agb.html">AGB</a>.
+        </p>
       </div>
     </section>
 
-    <section id="camps" class="page">
+    <!-- INHABERIN -->
+    <section class="section" id="inhaberin">
       <div class="container">
-        <div class="chapter">
-          <div class="num">03</div>
-          <h2>Camps</h2>
+        <div class="section-head">
+          <h2>Erfahrung auf höchstem Niveau</h2>
+          <p>
+            Die Tennisschule wird von einer ehemaligen Spitzenspielerin geleitet. Diese Erfahrung fließt heute direkt in
+            die Trainingsarbeit ein – strukturiert, fundiert und praxisnah.
+          </p>
         </div>
 
-        <div class="grid2">
-          <div class="card">
-            <h3>Oster- &amp; Herbstferien</h3>
-            <p class="muted">Intensives Training, Spiel &amp; Spaß – je nach Termin Tennis, Padel oder kombiniert.</p>
-          </div>
-          <div class="card">
-            <h3>Jetzt anfragen</h3>
-            <p class="muted">Termine &amp; Details gerne auf Anfrage.</p>
-            <a class="btn primary mt16" href="#kontakt">Camp anfragen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="ueberuns" class="page alt">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">04</div>
-          <h2>Über uns</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>HEISE TENNIS</h3>
-            <p class="muted">
-              Moderne Tennis- &amp; Padelschule mit klarer Trainingsstruktur,
-              individueller Betreuung und Freude am Spiel.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Unsere Werte</h3>
-            <ul class="muted">
-              <li>Qualität &amp; Struktur</li>
-              <li>Individuelle Förderung</li>
-              <li>Motivation &amp; Spaß</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kontakt" class="page">
-      <div class="container">
-        <div class="chapter">
-          <div class="num">05</div>
-          <h2>Kontakt</h2>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Anfrage senden</h3>
-            <form id="contactForm" novalidate>
-              <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-              <label>Name
-                <input id="name" type="text" required placeholder="Dein Name" />
-              </label>
-
-              <label>E-Mail
-                <input id="email" type="email" required placeholder="name@mail.de" />
-              </label>
-
-              <label>Nachricht
-                <textarea id="message" required placeholder="Worum geht’s? (Tennis, Padel, Camp …)"></textarea>
-              </label>
-
-              <button type="submit" class="btn primary mt16">Anfrage vorbereiten</button>
-              <div id="status" class="status" aria-live="polite"></div>
-            </form>
+        <div class="profile">
+          <div class="profile-photo" aria-label="Foto Platzhalter">
+            <!-- Hier später ein echtes Foto einsetzen -->
+            <span>Foto</span>
           </div>
 
-          <div class="card">
-            <h3>Direkter Kontakt</h3>
-            <p class="muted">
-              <strong>E-Mail:</strong> <a href="mailto:info@heisetennis.de">info@heisetennis.de</a><br />
-              <strong>Telefon:</strong> <a href="tel:+49123456789">+49 123 456 789</a>
-            </p>
+          <div class="profile-content">
+            <h3>Ranking-Highlights</h3>
+            <div class="grid stats">
+              <div class="stat">
+                <div class="stat-label">DTB Jugendrangliste (1992, AK I)</div>
+                <div class="stat-value">Platz 6</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">ITF Jugendweltrangliste (1992)</div>
+                <div class="stat-value">Einzel 71 · Doppel 195</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">WTA Weltrangliste (Dez. 1996)</div>
+                <div class="stat-value">Platz 203</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">DTB Damenrangliste</div>
+                <div class="stat-value">16 (1997) · B59 (2006)</div>
+              </div>
+            </div>
 
-            <div class="footer">
-              © <span id="year"></span> HEISE TENNIS ·
-              <a href="impressum.html">Impressum</a> ·
-              <a href="datenschutz.html">Datenschutz</a>
+            <h3 class="mt-lg">Karriere-Highlights (Auswahl)</h3>
+            <div class="timeline">
+              <div class="tl-item"><span class="tl-year">1992</span> Finalistin Panasonic German Junior Open (Mönchengladbach); 3. Platz Doppel; Finalistin Swiss Junior Open (Klosters)</div>
+              <div class="tl-item"><span class="tl-year">1993</span> 1. Platz offenes Damenturnier Würzburg; Junioren-Europameisterin Doppel (mit Petra Begerow); TVN-Meisterin Einzel &amp; Doppel; Damen-Regionalliga (Lintorfer TC)</div>
+              <div class="tl-item"><span class="tl-year">1994</span> Deutsche Meisterin Damendoppel (mit Kerstin Taube); TVN-Meisterin Einzel &amp; Doppel; Finalistin Warsteiner Grand Prix (Wilhelmshaven); Aufstieg Damen-Bundesliga (CHTC Krefeld)</div>
+
+              <div class="timeline-more" id="timelineMore" hidden>
+                <div class="tl-item"><span class="tl-year">1995</span> TVN-Meisterin Einzel &amp; Doppel; Damen-Bundesliga (CHTC Krefeld)</div>
+                <div class="tl-item"><span class="tl-year">1996</span> TVN-Meisterin Dameneinzel; Damen-Bundesliga (CHTC Krefeld); Siege u. a. gegen Petra Begerow (WTA 51, DTB 3) und Silke Meier (WTA 171, DTB 9)</div>
+                <div class="tl-item"><span class="tl-year">1997</span> Aufstieg Damen-Bundesliga (TC Babcock Oberhausen)</div>
+                <div class="tl-item"><span class="tl-year">1998</span> Bundesligaaufstieg (Bocholter TC Blau-Weiß)</div>
+                <div class="tl-item"><span class="tl-year">1999</span> Bundesliga (Bocholter TC Blau-Weiß)</div>
+                <div class="tl-item"><span class="tl-year">2000</span> Bundesliga (Bocholter TC Blau-Weiß)</div>
+                <div class="tl-item"><span class="tl-year">2001</span> 2. Bundesliga (Lintorfer TC)</div>
+                <div class="tl-item"><span class="tl-year">2002</span> 2. Bundesliga (Lintorfer TC); Finale US$ 10.000 Weltranglistenturnier Barcelona</div>
+                <div class="tl-item"><span class="tl-year">2003</span> Aufstieg 1. Bundesliga (Lintorfer TC)</div>
+                <div class="tl-item"><span class="tl-year">2004</span> Aufstiegsrunde 2. Bundesliga (Ratinger TC Grün-Weiß)</div>
+                <div class="tl-item"><span class="tl-year">2005</span> 1. Bundesliga Kader (Lintorfer TC)</div>
+              </div>
+
+              <button class="btn btn-ghost btn-sm mt-md" type="button" id="toggleTimeline">
+                Mehr anzeigen
+              </button>
+            </div>
+
+            <h3 class="mt-lg">Stationen als aktive Spielerin</h3>
+            <div class="chips">
+              <span class="chip">TC Homberg-Meiersberg</span>
+              <span class="chip">Lintorfer TC 1972 e. V.</span>
+              <span class="chip">TC Babcock Oberhausen 1975 e. V.</span>
+              <span class="chip">Ratinger Tennis Club Grün-Weiß</span>
+              <span class="chip">Bocholter Tennis-Club Blau-Weiß 1894 e. V.</span>
+              <span class="chip">CHTC Krefeld 1890 e. V.</span>
+            </div>
+
+            <div class="section-cta">
+              <a class="btn btn-primary" href="#kontakt">Training anfragen</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- STANDORT -->
+    <section class="section" id="standort">
+      <div class="container">
+        <div class="section-head">
+          <h2>Trainingsstandort</h2>
+          <p>
+            Unsere Trainings und Camps finden auf der Anlage des <strong>TC Angertal in Ratingen</strong> statt.
+            Für das Wintertraining im Tennis steht eine <strong>Tennishalle</strong> zur Verfügung.
+            Das Padeltraining findet ebenfalls am TC Angertal statt; in den Wintermonaten werden zusätzlich
+            verschiedene Padelhallen genutzt – je nach Absprache mit den Teilnehmenden.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="info-box">
+            <h3>Adresse</h3>
+            <p>
+              <strong>TC Angertal</strong><br />
+              Ernst-Stinshoff-Straße 50<br />
+              40883 Ratingen
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-outline btn-sm" href="https://www.google.com/maps?q=TC%20Angertal%20Ernst-Stinshoff-Stra%C3%9Fe%2050%2040883%20Ratingen" target="_blank" rel="noopener">
+                Route öffnen
+              </a>
+            </div>
+          </div>
+
+          <div class="map-box" aria-label="Karte">
+            <div class="map-placeholder" id="mapPlaceholder">
+              <p class="muted">
+                Die Karte wird aus Datenschutzgründen erst nach Aktivierung geladen.
+              </p>
+              <button class="btn btn-primary btn-sm" type="button" id="loadMapBtn">
+                Karte laden
+              </button>
+            </div>
+
+            <div class="map-embed" id="mapEmbed" hidden>
+              <!-- iframe wird per JS eingefügt -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section class="section" id="downloads">
+      <div class="container">
+        <div class="section-head">
+          <h2>Downloads</h2>
+          <p>Formulare und Informationen als PDF – bei Bedarf einfach ergänzen.</p>
+        </div>
+
+        <div class="grid cards">
+          <a class="card link-card" href="#" aria-disabled="true">
+            <h3>Anmeldeformular</h3>
+            <p class="muted">PDF (Platzhalter)</p>
+          </a>
+          <a class="card link-card" href="#" aria-disabled="true">
+            <h3>Campinformationen</h3>
+            <p class="muted">PDF (Platzhalter)</p>
+          </a>
+          <a class="card link-card" href="#" aria-disabled="true">
+            <h3>Weitere Dokumente</h3>
+            <p class="muted">PDF (Platzhalter)</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Kontakt &amp; Anfragen</h2>
+          <p>Du hast Fragen zu Training, Camps oder individuellen Angeboten? Wir freuen uns über deine Anfrage.</p>
+        </div>
+
+        <div class="grid contact-grid">
+          <a class="contact-card" href="tel:+490000000000">
+            <div class="contact-title">Telefon</div>
+            <div class="contact-value">+49 (0) XXX / XXXXXXX</div>
+          </a>
+          <a class="contact-card" href="https://wa.me/490000000000" target="_blank" rel="noopener">
+            <div class="contact-title">WhatsApp</div>
+            <div class="contact-value">Nachricht schreiben</div>
+          </a>
+          <a class="contact-card" href="mailto:info@beispiel.de">
+            <div class="contact-title">E-Mail</div>
+            <div class="contact-value">info@beispiel.de</div>
+          </a>
+        </div>
+
+        <div class="form-wrap">
+          <h3>Anfrageformular</h3>
+
+          <!-- Hinweis: Auf GitHub Pages kann ein Formular nicht "von selbst" E-Mails senden.
+               Option 1: Formspree (empfohlen): action="https://formspree.io/f/DEINCODE"
+               Option 2: später WordPress: echtes Formular-Plugin -->
+          <form class="form" action="#" method="post">
+            <div class="grid two">
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" placeholder="Dein Name" />
+              </label>
+              <label>
+                E-Mail
+                <input type="email" name="email" autocomplete="email" placeholder="name@beispiel.de" />
+              </label>
+            </div>
+
+            <div class="grid two">
+              <label>
+                Telefon (optional)
+                <input type="tel" name="phone" autocomplete="tel" placeholder="+49 …" />
+              </label>
+              <label>
+                Anliegen
+                <select name="topic">
+                  <option value="tennis">Tennis</option>
+                  <option value="padel">Padel</option>
+                  <option value="camp">Camp</option>
+                  <option value="sonstiges">Sonstiges</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Nachricht
+              <textarea name="message" rows="6" placeholder="Worum geht es? (z. B. Camp, Level, Zeitraum)"></textarea>
+            </label>
+
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit">Anfragen</button>
+              <p class="fineprint">
+                Mit dem Absenden der Anfrage erklärst du dich mit der Verarbeitung deiner Daten gemäß unserer
+                <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="footer-brand">Tennisschule Heise</div>
+          <div class="footer-note">© <span id="year"></span> · Alle Rechte vorbehalten</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <script src="assets/script.js?v=10"></script>
+  <script src="script.js"></script>
 </body>
 </html>
